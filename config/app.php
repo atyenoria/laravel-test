@@ -13,6 +13,7 @@ return [
     |
     */
 
+
     'env' => env('APP_ENV', 'production'),
 
     /*
@@ -65,7 +66,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +79,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -123,6 +124,8 @@ return [
 
     'providers' => [
 
+
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -151,10 +154,15 @@ return [
         /*
          * Application Service Providers...
          */
+
+
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Collective\Html\HtmlServiceProvider::class
 
     ],
 
@@ -170,6 +178,12 @@ return [
     */
 
     'aliases' => [
+
+
+
+        'Form' => Collective\Html\FormFacade::class,  // 追加
+        'Html' => Collective\Html\HtmlFacade::class,
+
 
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
